@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" >
+<meta charset="utf-8"/>
+<header>
+<link href="main.css" rel="stylesheet">
+
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<div id="container"></div>
+
+
+<h2 style="padding-left:50px">Springfield Energy</h2>
+<br></br>
+</header>
+<body>
+<div class="code">
+  <div class="wrapper dashboard">
+    <div class="generation" id="generation"></div>
+    <div class="price" id="price"></div>
+    
+    <div class="pie" id="pie">
+      <button onclick="togglePieBar('piecharthere')" style="display: block; margin: 0 auto;">Toggle Bar/Pie</button>
+      <div id = "piecharthere">Pie</div>
+      <div id= "barcharthere" style= "display:none">Bar</div>
+    </div>
+    <div class="temperature" id="temperature"></div>
+    <div class="legend">
+            <table>
+        <tr>
+          <th></th>
+          <th>Power (MW)</th>
+          <th>Contribution</th>
+          <th>Av.Value ($/MWh)</th>
+        </tr>
+
+        <tr>
+          <th>Sources</th>
+          <th id= 'totalPower'>-</th>
+          <th></th>
+          <th id= 'avgPrice'>-</th>
+        </tr>
+
+        <tr>
+          <td bgcolor="#f15c80">Wind</td>
+          <td id = 'windPower'>-</td>
+          <td id = 'windContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td bgcolor="#f7a35c">Hydro</td>
+          <td id = 'hydroPower'>-</td>
+          <td id = 'hydroContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td  bgcolor="#90ed7d">Gas (CCGT)</td>
+          <td id = 'gasPower'>-</td>
+          <td id = 'gasContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td bgcolor="#434348" style="color:white">Distillate</td>
+          <td id = 'distPower'>-</td>
+          <td id = 'distContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td bgcolor="#7cb5ec">Black Coal</td>
+          <td id = 'coalPower'>-</td>
+          <td id = 'coalContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>Loads</th>
+          <th id = 'loadsPower'>-</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td bgcolor="#e4d354">Exports</td>
+          <td id = 'exportPower'>-</td>
+          <td id = 'exportContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td bgcolor="#8085e9">Pumps</td>
+          <td id = 'pumpPower'>-</td>
+          <td id = 'pumpContr'>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>Net</th>
+          <th id = 'netPower'>-</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Renewables</th>
+          <td></td>
+          <th id= 'renewablesContr'>-</th>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  font-size: 13px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+
+tr {
+  background-color: white;
+}
+</style>
+
+</div>
+</body>
+<script src="main.js" type="text/javascript"></script>
+
+
+</html>
